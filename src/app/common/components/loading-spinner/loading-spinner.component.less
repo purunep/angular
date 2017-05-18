@@ -1,0 +1,63 @@
+@baseColor: #fff;
+@textColor: #000;
+@overlayColor: #000;
+@ballColor: gray;
+
+#loading-Overlay {
+    position: fixed; /* Sit on top of the page content */
+    width: 100%; /* Full width (cover the whole page) */
+    height: 100%; /* Full height (cover the whole page) */
+    top: 0; 
+    left: 0;
+    right: 0;
+    bottom: 0;
+    padding: 0;
+    margin: 0;
+    background-color: rgba(red(@baseColor), green(@baseColor), blue(@baseColor), 0.6); /* Black background with opacity */
+    z-index: 9999; /* Specify a stack order in case you're using a different order for other elements */
+    cursor: pointer; /* Add a pointer on hover */
+}
+
+#loading-Animation-Container{
+    width: 200px;
+    margin: 5px auto;
+    padding-top: 5px;
+}
+
+.loading-text{
+    font-size: 1.2em;
+    color: @textColor;
+}
+
+.sk-three-bounce {
+  margin: 30px auto;
+  width: 100px;
+  text-align: center; }
+  .sk-three-bounce .sk-child {
+    width: 13px;
+    height: 13px;
+    background-color: @ballColor;
+    border-radius: 100%;
+    display: inline-block;
+    -webkit-animation: sk-three-bounce 1.4s ease-in-out 0s infinite both;
+            animation: sk-three-bounce 1.4s ease-in-out 0s infinite both; }
+  .sk-three-bounce .sk-bounce1 {
+    -webkit-animation-delay: -0.32s;
+            animation-delay: -0.32s; }
+  .sk-three-bounce .sk-bounce2 {
+    -webkit-animation-delay: -0.16s;
+            animation-delay: -0.16s; }
+@-webkit-keyframes sk-three-bounce {
+  0%, 80%, 100% {
+    -webkit-transform: scale(0);
+            transform: scale(0); }
+  40% {
+    -webkit-transform: scale(1);
+            transform: scale(1); } }
+@keyframes sk-three-bounce {
+  0%, 80%, 100% {
+    -webkit-transform: scale(0);
+            transform: scale(0); }
+  40% {
+    -webkit-transform: scale(1);
+            transform: scale(1); } }
